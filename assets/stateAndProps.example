@@ -1,0 +1,25 @@
+var ColorfulCounter = React.createClass({
+  getInitialState() {
+    return { count: 0 }
+  }
+
+  getClassNames() {
+    var type = this.props.color || 'green'
+    return 'button ' + type
+  },
+
+  handleClick() {
+    this.setState({ count: this.state.count++ })
+  },
+
+  render() {
+    return (
+      <div>
+        Count: {this.state.count}
+        <button className={this.getClassNames()} onClick={this.handleClick}>
+          {this.props.text}
+        </button>
+      </div>
+    )
+  }
+})

@@ -1,0 +1,27 @@
+var Form = PseudoBackboneView.extend({
+  render() {
+    var isSubmitted = this.attrs.isSubmitted;
+    var buttonText = this.attrs.buttonText;
+
+    if (!isSubmitted && !this.button) {
+      // Form is not yet submitted. Create the button!
+      this.button = new Button({
+        children: buttonText,
+        color: 'blue'
+      });
+      this.el.appendChild(this.button.el);
+    }
+
+    if (isSubmitted && this.button) {
+      // Form was submitted. Destroy the button!
+      this.el.removeChild(this.button.el);
+      this.button.destroy();
+    }
+
+    if (isSubmitted && !this.message) {
+      // Form was submitted. Show the success message!
+      this.message = new Message({ text: 'Success!' });
+      this.el.appendChild(this.message.el);
+    }
+  }
+})

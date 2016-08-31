@@ -1,0 +1,18 @@
+// Define the component class
+var ColorfulButton = React.createClass({
+  getClassNames() {
+    var type = this.props.color || 'green'
+    return 'button ' + type
+  },
+
+  render() {
+    return (
+      <button className={this.getClassNames()}>
+        {this.props.text}
+      </button>
+    )
+  }
+})
+
+// Render into the document (note: usually only done by root component)
+ReactDOM.render(<ColorfulButton />, document.getElementById('root'))

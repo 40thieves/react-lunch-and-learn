@@ -1,0 +1,10 @@
+{
+  type: 'button',
+  props: {
+    className: 'button button-blue',
+    children: {
+      type: 'b',
+      children: 'OK!'
+    }
+  }
+}
