@@ -252,6 +252,16 @@ export default class LunchAndLearn extends Component {
               textSize={15}
             />
           </Slide>
+
+          <Slide>
+            <Heading textColor="secondary">References</Heading>
+            <List>
+              <ListItem><Link href="https://facebook.github.io/react/docs/tutorial.html">Official tutorial</Link></ListItem>
+              <ListItem><Link href="https://facebook.github.io/react/docs/thinking-in-react.html">'Thinking in React'</Link></ListItem>
+              <ListItem><Link href="https://medium.com/@dan_abramov/react-components-elements-and-instances-90800811f8ca">React Components, Element and Instances</Link></ListItem>
+              <ListItem><Link href="http://calendar.perfplanet.com/2013/diff/">React's diff algorithm</Link></ListItem>
+            </List>
+          </Slide>
         </Deck>
       </Spectacle>
     )
